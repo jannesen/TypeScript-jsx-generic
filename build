@@ -1,0 +1,3 @@
+node ../Typescript/lib/tsc -jsx react -target es6 sample1.tsx
+node ../Typescript/lib/tsc -jsx react -target es6 sample2.tsx
+node ../Typescript/lib/tsc -jsx react -target es6 sample3.tsx
