@@ -99,5 +99,3 @@ The type of a fragment is the union of the element types in the fragment.
 ## Typechecking.
 jsx generic use typechecking for everything.The type of attributes en children are checked. The returned type is the correct type.
 
-
-
