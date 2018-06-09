@@ -1,5 +1,8 @@
 # TypeScript jsx-generic
 
+     JSX generic is not part of Microsoft/TypeScript it is part of pjannesen/TypeScript
+
+
 JSX is an XML-like syntax extension to ECMAScript without any defined semantics. It's intended to be used by various preprocessors (transpilers) to transform these tokens into standard ECMAScript.
 
 The JSX implementation of TypeScript was original developed for use with React. The relationship between JSX and React is like JavaScript and React.
@@ -15,7 +18,7 @@ De the following 2 lines in the top of je tsx file
     /* @jsx-mode generic */
     /* @jsx-intrinsic-factory <intrinsic-factory-createElement> */
 
-Use compiler options jsx: 'react'
+Use compiler options jsx: 'transpile' or ('react')
 
 ## JSX elements
 There are 4 types of JSX elements: 
@@ -33,7 +36,7 @@ intrinsic-factory-createElement must have the following signature:
 
 With jsx-generic there is no need for special JSX namespace. All the typing information is gained from the createElement signature.
 
-For example _&lt;div class=”test”&gt;_ is transpiled to _createElement("div", { class: "test" });_
+For example _&lt;div class=”test”&gt;_ Transpiles to _createElement("div", { class: "test" });_
 
 All typing is checked. the type of &lt;div&gt; the returned type of createElement.
 Also function overloads of createElements is supported.
@@ -54,7 +57,7 @@ Can be used in JSX like
        <MyButton text="click here" />
     </div>
 ```
-_&lt;MyButton text="click here" /&gt;_ Is transpiled to _MyButton({text: "click here"})_
+_&lt;MyButton text="click here" /&gt;_ transpiles to _MyButton({text: "click here"})_
 
 
 ### Class elements.
@@ -75,7 +78,7 @@ Can be used in JSX like
        <Grid rows={10} columns{20} />
     </div>
 ```
-_&lt;Grid rows={10} columns{10} /&gt;_ Is transpiled to _new Grid({rows: 10, columns: 20})_
+_&lt;Grid rows={10} columns{10} /&gt;_ transpiles to _new Grid({rows: 10, columns: 20})_
 
 
 ### fragments
